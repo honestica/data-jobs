@@ -26,7 +26,7 @@ Do not modify given programs.
 
 ## Level 1
 
-Run the `communication_generator` program in order to generate communication logs into folder `./communications/communications-{id}.json`. Each file represent one communication and it will look like this:
+Run the `communication_file_generator.py` program in order to generate communication logs into folder `./communications/communications-{id}.json`. Each file represent one communication and it will look like this:
 
 `id=0a0bd4d3-05cf-4912-b6ee-40d79a4f9901|telecom=mail|created_at=2019-07-26 18:30:07|sender={'name': 'Herve Delatour', 'profession': 'liberal'}`
 
@@ -46,7 +46,7 @@ The goal is to read all these files and transform them into json files in `./pro
 
 ## Level 2
 
-Run the program `communication_emitter` that will send unprocessed communications to the address http://127.0.0.1:5000. 
+Run the program `communication_emitter.py` that will send unprocessed communications to the address http://127.0.0.1:5000. 
 Create a simple HTTP server that will listen to these requests, process communications using processing done in level 1 and write them into `./processed/communication-{id}.json`. 
 
 Hint: You can look at Flask or Bottle framework
@@ -72,6 +72,8 @@ CREATE TABLE communication(
 Based on the table previously created we would like to answer these questions:
 - Demateralization rate (= number of papered communication / total number of communication) for each `liberal` doctors
 - Doctors list that have sent at least 5 communications during the 7 days following their first communication.
+
+You can write your queries in the file `level_sql/queries.sql`.
 
 ### Data details
 
