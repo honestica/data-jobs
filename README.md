@@ -18,8 +18,9 @@ For higher levels we are interested in seeing code that is:
 - maintainable
 - clean
 - robust
+- reliable
 
-We are waiting for python (3.7) code.
+We are waiting for python (3.9) code.
 Write your program in the corresponding level directory.
 Do not modify given programs.
 
@@ -45,13 +46,6 @@ The goal is to read all these files and transform them into json files in `./pro
 ```
 
 ## Level 2
-
-Run the program `communication_emitter.py` that will send unprocessed communications to the address http://127.0.0.1:5000. 
-Create a simple HTTP server that will listen to these requests, process communications using processing done in level 1 and write them into `./processed/communication-{id}.json`. 
-
-Hint: You can look at Flask or Bottle framework
-
-## Level 3
 
 As in previous level, instead of writing logs, we would like to insert them into a Mysql database.
 
@@ -85,7 +79,7 @@ You can write your queries in the file `level_sql/queries.sql`.
 - `sender_name`: name of the person who send the communication
 - `sender_category`: job type of the person who send the communication
 
-If you haven't made technical level 3, you can use data stored in `./sample/communications_sample.csv`.
+If you haven't made technical level 2, you can use data stored in `./sample/communications_sample.csv`.
 No obligation of setting up a database, we'll only focus on the sql code.
 
 Have fun
